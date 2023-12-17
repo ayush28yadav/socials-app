@@ -27,4 +27,5 @@ app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 
 
+
 server.listen(PORT, () => console.log(`Server started at http://localhost:${PORT}`));
