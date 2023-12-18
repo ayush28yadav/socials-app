@@ -8,7 +8,7 @@ import {
 	updateUser,
 	getSuggestedUsers,
 	freezeAccount,
-} from "../controllers/userController.js";
+} from "../controlers/usercontroler.js";
 import protectRoute from "../middleware/protectRoute.js";
 
 const router = express.Router();
