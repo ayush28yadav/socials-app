@@ -32,10 +32,11 @@ const Header = () => {
 			<Text
 				cursor={"pointer"}
 				
-				w={6}
+				fontWeight="bold" // Set fontWeight to bold
+				fontSize="lg"
 				color ={colorMode === "dark" ? "#ffffff"	: "#000000"}
 				onClick={toggleColorMode}
-				display="inline-block"
+				isTruncated
 			>
 				SOCIALS
 			</Text>
