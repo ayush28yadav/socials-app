@@ -85,8 +85,8 @@ const UserHeader = ({ user }) => {
 					<Link color={"gray.light"}>instagram.com</Link>
 				</Flex>
 				<Flex>
-					<Box className='icon-container'>
-						<BsInstagram size={24} cursor={"pointer"} />
+					<Box className='icon-container' marginRight={4} >
+						<BsInstagram size={24} cursor={"pointer"}  />
 					</Box>
 					<Box className='icon-container'>
 						<Menu>

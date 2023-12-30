@@ -1,7 +1,11 @@
-import {express} from "express";
+import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./db/connectDB.js";
-import userRoutes from "./Routes/userRoutes.js"
+import cookieParser from "cookie-parser";
+import userRoutes from "./Routes/userRoutes.js";
+import postRoutes from "./Routes/postRoutes.js";
+const app = express();
+import { v2 as cloudinary } from "cloudinary";
 
 
 dotenv.config();
@@ -29,4 +33,4 @@ app.use("/api/posts", postRoutes);
 
 
 
-server.listen(PORT, () => console.log(`Server started at http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Server started at http://localhost:${PORT}`));

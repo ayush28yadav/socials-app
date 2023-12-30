@@ -7,8 +7,8 @@ import {
 	replyToPost,
 	getFeedPosts,
 	getUserPosts,
-} from "../controllers/postController.js";
-import protectRoute from "../middlewares/protectRoute.js";
+} from "../controlers/postcontroler.js";
+import protectRoute from "../middleware/protectRoute.js";
 
 const router = express.Router();
 
