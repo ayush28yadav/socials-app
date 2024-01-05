@@ -248,7 +248,7 @@ const searchUsers= async(req,res) => {
 	
 		if (users.length > 0) {
 		  // If users are found, send the array of user data as a JSON response
-		  res.json(users);
+		  res.status(200).json(users);
 		} else {
 		  // If no users are found, send a 404 response
 		  res.status(404).json({ message: "No users found" });
