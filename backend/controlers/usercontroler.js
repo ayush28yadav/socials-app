@@ -239,6 +239,27 @@ const freezeAccount = async (req, res) => {
 	}
 };
 
+const searchUsers= async(req,res) => {
+	try {
+		const { username } = req.query;
+	
+		// Use find to find users with the specified username
+		const users = await User.find({ username });
+	
+		if (users.length > 0) {
+		  // If users are found, send the array of user data as a JSON response
+		  res.json(users);
+		} else {
+		  // If no users are found, send a 404 response
+		  res.status(404).json({ message: "No users found" });
+		}
+	  } catch (error) {
+		// Handle any errors that might occur during the search
+		console.error(error);
+		res.status(500).json({ message: "Internal Server Error" });
+	  }
+}
+
 export {
 	signupUser,
 	loginUser,
