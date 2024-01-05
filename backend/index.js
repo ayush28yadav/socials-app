@@ -4,8 +4,10 @@ import connectDB from "./db/connectDB.js";
 import cookieParser from "cookie-parser";
 import userRoutes from "./Routes/userRoutes.js";
 import postRoutes from "./Routes/postRoutes.js";
-const app = express();
+import messageRoutes from "./Routes/messageRoutes.js";
+
 import { v2 as cloudinary } from "cloudinary";
+import { app, server } from "./socket/socket.js";
 
 
 dotenv.config();
@@ -30,7 +32,8 @@ app.use(cookieParser());
 // Routes
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
+app.use("/api/messages", messageRoutes);
 
 
 
-app.listen(PORT, () => console.log(`Server started at http://localhost:${PORT}`));
+server.listen(PORT, () => console.log(`Server started at http://localhost:${PORT}`));

@@ -1,4 +1,5 @@
-import { Button, Flex, Image, Link, useColorMode,Text } from "@chakra-ui/react";
+import { Button, Flex, Image, Link, useColorMode,Text} from "@chakra-ui/react";
+
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import userAtom from "../atoms/userAtom";
 import { AiFillHome } from "react-icons/ai";
@@ -44,7 +45,7 @@ const Header = () => {
 			{user && (
 				<Flex alignItems={"center"} gap={4}>
 					<Link as={RouterLink} to={`/${user.username}`}>
-						<RxAvatar size={24} />
+					<RxAvatar size={24} />
 					</Link>
 					<Link as={RouterLink} to={`/chat`}>
 						<BsFillChatQuoteFill size={20} />
