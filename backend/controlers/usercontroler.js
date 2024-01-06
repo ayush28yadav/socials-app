@@ -241,10 +241,14 @@ const freezeAccount = async (req, res) => {
 
 const searchUsers= async(req,res) => {
 	try {
-		const { username } = req.query;
+		const { username } = req.params;
 	
 		// Use find to find users with the specified username
-		const users = await User.find({ username });
+	 // Use regex for a case-insensitive search
+	 const regex = new RegExp(username, "i");
+
+	 // Use find with regex to find users with usernames containing the specified substring
+	 const users = await User.find({ username: regex }, " _id name username profilePic");
 	
 		if (users.length > 0) {
 		  // If users are found, send the array of user data as a JSON response
