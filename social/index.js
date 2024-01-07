@@ -34,6 +34,16 @@ app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/messages", messageRoutes);
 
+app.use(express.static(path.join(__dirname, "./client/build")));
+app.get("*", function (_, res) {
+  res.sendFile(
+    path.join(__dirname, "./client/build/index.html"),
+    function (err) {
+      res.status(500).send(err);
+    }
+  );
+});
 
 
-server.listen(PORT, () => console.log(`Server started at http://localhost:${PORT}`));
+
+server.listen(PORT, () => console.log(`Server started at ${PORT}`));

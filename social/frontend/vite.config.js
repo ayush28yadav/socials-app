@@ -9,7 +9,7 @@ export default defineConfig({
 		
 		proxy: {
 			"/api": {
-				target: `${window.location.origin}`,
+				target: '',
 				changeOrigin: true,
 				secure: false,
 			},
