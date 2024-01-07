@@ -9,7 +9,7 @@ export default defineConfig({
 		
 		proxy: {
 			"/api": {
-				target: "http://localhost:3000",
+				target: `${window.location.origin}`,
 				changeOrigin: true,
 				secure: false,
 			},
