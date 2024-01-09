@@ -33,6 +33,8 @@ app.use(cookieParser());
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/messages", messageRoutes);
+const __filename = new URL(import.meta.url).pathname;
+const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, "./frontend/build")));
 app.get("*", function (_, res) {
