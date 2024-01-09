@@ -1,17 +1,17 @@
 import { Box, Container } from "@chakra-ui/react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
-import UserPage from "../pages/UserPage";
-import PostPage from "../pages/PostPage";
-import Header from "../components/Header";
-import HomePage from "../pages/HomePage";
-import AuthPage from "../pages/AuthPage";
+import UserPage from "./pages/UserPage";
+import PostPage from "./pages/PostPage";
+import Header from "./components/Header";
+import HomePage from "./pages/HomePage";
+import AuthPage from "./pages/AuthPage";
 import { useRecoilValue } from "recoil";
-import userAtom from "../atoms/userAtom";
-import UpdateProfilePage from "../pages/UpdateProfilePage";
-import CreatePost from "../components/CreatePost";
-import ChatPage from "../pages/ChatPage";
-import SearchPage from "../pages/SearchPage";
-import  SettingsPage  from "../pages/SettingsPage";
+import userAtom from "./atoms/userAtom.js";
+import UpdateProfilePage from "./pages/UpdateProfilePage";
+import CreatePost from "./components/CreatePost";
+import ChatPage from "./pages/ChatPage";
+import SearchPage from "./pages/SearchPage";
+import  SettingsPage  from "./pages/SettingsPage";
 
 function App() {
 	const user = useRecoilValue(userAtom);
