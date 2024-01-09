@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "name": "starter-express-api",
+  "name": "mern",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,7 +15,10 @@
   },
   "author": "",
   "license": "ISC",
- 
+  "bugs": {
+    "url": "https://github.com/ayush28yadav/socials-app/issues"
+  },
+  "homepage": "https://github.com/ayush28yadav/socials-app#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.41.1",
